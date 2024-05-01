@@ -1,33 +1,74 @@
-// Funktion til at vise modalen
+document.addEventListener("DOMContentLoaded", function() {
+    var dropdownBtn = document.querySelector(".dropbtn");
+    var dropdownContent = document.querySelector(".dropdown-content");
+
+    dropdownBtn.addEventListener("click", function() {
+        dropdownContent.classList.toggle("show");
+    });
+
+    window.addEventListener("click", function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            if (dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+            }
+        }
+    });
+});
+
+/*
 function showModal() {
-    console.log("showModal() blev kaldt");
-    document.getElementById('yesModal').style.display = 'block'; // Vis modal for "Ja" svar
-}
+    var overlay = document.getElementById("overlay-first");
+    overlay.style.display = "flex"; // Vis overlay for første valgmulighed
+  }
+  
+  function showSecondModal() {
+    var overlayFirst = document.getElementById("overlay-first");
+    overlayFirst.style.display = "none"; // Skjul første overlay
+    var overlaySecond = document.getElementById("overlay-ja");
+    overlaySecond.style.display = "flex"; // Vis overlay for "Ja da!"
+  }
+  
+  function showThirdModal() {
+    var overlayFirst = document.getElementById("overlay-first");
+    overlayFirst.style.display = "none"; // Skjul første overlay
+    var overlayThird = document.getElementById("overlay-naeppe");
+    overlayThird.style.display = "flex"; // Vis overlay for "Næppe"
+  }
+  
+  function hideAllModals() {
+    var overlays = document.querySelectorAll(".overlay");
+    overlays.forEach(function(overlay) {
+      overlay.style.display = "none"; // Skjul alle overlayers
+    });
+  }*/
 
-// Funktion til at lukke modalen
-function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
-}
-
-// Funktion til at håndtere "Ja" svar
-function handleYes() {
-    document.getElementById('yesModal').style.display = 'block'; // Vis modal for "Ja" svar
-    closeModal(); // Luk det oprindelige spørgsmål-modal
-}
-
-// Funktion til at håndtere "Nej" svar
-function handleNo() {
-    document.getElementById('noModal').style.display = 'block'; // Vis modal for "Nej" svar
-    closeModal(); // Luk det oprindelige spørgsmål-modal
-}
-
-// Funktion til at lukke "Ja" modalen
-function closeYesModal() {
-    document.getElementById('yesModal').style.display = 'none'; // Skjul modal for "Ja" svar
-}
-
-// Funktion til at lukke "Nej" modalen
-function closeNoModal() {
-    document.getElementById('noModal').style.display = 'none'; // Skjul modal for "Nej" svar
-}
-
+//Klik her
+  function showModal(buttonId) {
+    var overlay = document.getElementById("overlay-first-" + buttonId);
+    overlay.style.display = "flex"; // Vis overlay for første valgmulighed for den specifikke "Klik her" knap
+  }
+  
+  function showSecondModal(buttonId) {
+    var overlayFirst = document.getElementById("overlay-first-" + buttonId);
+    overlayFirst.style.display = "none"; // Skjul første overlay
+    var overlaySecond = document.getElementById("overlay-ja");
+    overlaySecond.style.display = "flex"; // Vis overlay for "Ja da!"
+  }
+  
+  function showThirdModal(buttonId) {
+    var overlayFirst = document.getElementById("overlay-first-" + buttonId);
+    overlayFirst.style.display = "none"; // Skjul første overlay
+    var overlayThird = document.getElementById("overlay-naeppe");
+    overlayThird.style.display = "flex"; // Vis overlay for "Næppe"
+  }
+  
+  function hideAllModals() {
+    var overlays = document.querySelectorAll(".overlay");
+    overlays.forEach(function(overlay) {
+      overlay.style.display = "none"; // Skjul alle overlayers
+    });
+  }
+  
+  
+  
+  
