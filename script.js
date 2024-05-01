@@ -15,34 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/*
-function showModal() {
-    var overlay = document.getElementById("overlay-first");
-    overlay.style.display = "flex"; // Vis overlay for første valgmulighed
-  }
-  
-  function showSecondModal() {
-    var overlayFirst = document.getElementById("overlay-first");
-    overlayFirst.style.display = "none"; // Skjul første overlay
-    var overlaySecond = document.getElementById("overlay-ja");
-    overlaySecond.style.display = "flex"; // Vis overlay for "Ja da!"
-  }
-  
-  function showThirdModal() {
-    var overlayFirst = document.getElementById("overlay-first");
-    overlayFirst.style.display = "none"; // Skjul første overlay
-    var overlayThird = document.getElementById("overlay-naeppe");
-    overlayThird.style.display = "flex"; // Vis overlay for "Næppe"
-  }
-  
-  function hideAllModals() {
-    var overlays = document.querySelectorAll(".overlay");
-    overlays.forEach(function(overlay) {
-      overlay.style.display = "none"; // Skjul alle overlayers
-    });
-  }*/
 
-//Klik her
+//Klik her-knap 1 og 2
   function showModal(buttonId) {
     var overlay = document.getElementById("overlay-first-" + buttonId);
     overlay.style.display = "flex"; // Vis overlay for første valgmulighed for den specifikke "Klik her" knap
@@ -69,6 +43,21 @@ function showModal() {
     });
   }
   
+
+//Rød klat, så musen ikke bliver væk for svagtseende
+  document.addEventListener('DOMContentLoaded', function () {
+    // Find det tilpassede cursor-element
+    var cursor = document.querySelector('.custom-cursor');
+
+    // Lyt efter musebevægelser på dokumentet
+    document.addEventListener('mousemove', function (e) {
+        // Opdater cursorpositionen til at følge musemarkøren
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px';
+    });
+});
+
+
   
   
   

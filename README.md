@@ -9,9 +9,9 @@ Dette dokument fungerer som en journal for udviklingen af projektet.
 - **Udvikling:** HTML er færdig-opsat, bortset fra font-awesome... Jeg sletter alt javascript og scss og starter på en frisk i morgen. 
 - **Udfordringer:** Stødte på problemer med konfiguration/opsætning af icons. Må løse det i morgen. 
 
-## 30. april 2024
-- **Planlægning:** Jeg skal have styr på icons før jeg kan gå i gang med scss. Starter med opsætning til mobil og derefter implementerer jeg "klik her"-knappernes indhold. Med Javascript. Lad os nu se. 
-- **Udvikling:** 
+## 1. maj 2024
+- **Planlægning:** Skal have styr på de klik-her-scenarier i javascript. 
+- **Udvikling:** De første to klik-her-knapper er sat op. 
 - **Udfordringer:** 
 
 # Github link 
