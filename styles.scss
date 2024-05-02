@@ -1,4 +1,74 @@
 @use 'overlays';
 @use 'extra';
-@use 'variables';
 
+// Farver
+$primary-color: #333333;
+$secondary-color: #F5F5DE;
+$bg-color: #F5F5F5;
+$success-color: #65C855;
+$warning-color: #EB5242;
+$info-color: #3373D2;
+
+// Typografi og størrelser
+$p-font-family: "Times New Roman", Times, serif;
+$p-font-size: 16px;
+
+$h1-font-family: "Chomsky";
+$h1-font-size: 100px;
+
+$h2-font-family: "Newsreader";
+$h2-font-size: 16px;
+
+$h3-font-family: "Times New Roman", Times, serif;
+$h3-font-size: 20px;
+
+$h4-font-family: Roboto;
+$h4-font-size: 10px;
+
+$h5-font-family: "Times New Roman", Times, serif;
+$h5-font-size: 20px;
+
+$cite-font-family: "Times New Roman", Times, serif;
+$cite-font-size: 20px;
+
+$nav1-font-family: "Newsreader";
+$nav1-font-size: 16px;
+
+$nav1-font-family: "Roboto";
+$nav2-font-size: 14px;
+
+// Størrelser
+$container-max-width: 1140px;
+$padding-small: 10px;
+$padding-medium: 20px;
+$padding-large: 30px;
+
+
+// Generel styling
+body{
+  background-color: $bg-color;
+  color: $primary-color;
+  
+  img {
+    width: 100%; // Gør billedet 100% af dets containerbredde
+    height: auto; // Bevar billedets aspektratio
+    display: block; // Fjern eventuelle mellemrum under billedet
+    margin: 0 auto; // Centrer billedet inden i dets container
+  }
+  
+  img:hover {
+    transform: scale(1.05); // Skalér billedet lidt ved hover
+  }
+
+  header img {
+    width: 100%;
+    max-width: 10%;
+    height: auto;
+    display: block;
+  }
+  
+  
+}
+
+
+// Responsivitet

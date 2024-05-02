@@ -49,4 +49,24 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: 9999;
+}
+
+body {
+  background-color: #F5F5F5;
+  color: #333333;
+}
+body img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+body img:hover {
+  transform: scale(1.05);
+}
+body header img {
+  width: 100%;
+  max-width: 10%;
+  height: auto;
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
