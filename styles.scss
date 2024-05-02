@@ -52,6 +52,9 @@ cite, p, h3, h5 {
 
 //Styling af opsætning, mobile first 
 body {
+  margin: 0; // Fjern standard margin på body-elementet
+  padding: 0; // Fjern standard padding på body-elementet
+  background-color: $bg-color;
   //Styling af indhold i header
   header {
     //color: #65C855;
@@ -65,7 +68,8 @@ body {
 
   //Styling af indhold i main
   main {
-    img {
+    padding: 2%;
+      img {
       width: 100%; // Gør billedet 100% af dets containerbredde
       height: auto; // Bevar billedets aspektratio
       display: block; // Fjern eventuelle mellemrum under billedet
@@ -141,15 +145,102 @@ body {
   
       @media screen and (max-width: 768px) {
           .advertisement-heading {
-              font-size: 85px;
+              font-size: 70px;
               font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           }
       }
   }
   
-  
-  
-  
+  .divider-main {
+    border-top: 1px solid black; // Sort streg
+    width: 100%; // 90% af bredden
+    margin: 0 auto; // Centreret i forhold til parent container
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .samtale{
+    padding-bottom: 20px;
+  }
+
+ // Styling for custom-button
+ .custom-button {
+  width: 200px; // Sæt bredden til 200px
+  height: 70px; // Sæt højden til 70px
+  border-radius: 100px; // Gør knappen helt rundet
+  background-color: $bg-color; // Baggrundsfarve
+  text-align: center; // Centrer tekst inden i knappen
+  font-size: 30px; // Skriftstørrelse
+  font-family: "Chomsky"; // Skrifttype
+  color: $info-color; // Skriftfarve
+  box-shadow: 0px 5px 15px $info-color;
+  border: none;
+}
+
+.around-button {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  display: flex; // Gør det muligt at justere elementer i midten
+  align-items: center; // Centrer elementer vertikalt
+  justify-content: center; // Centrer elementer horisontalt
+}
+
+// Styling for overlay
+.overlay {
+  display: none; // Start med at skjule overlayers
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5); // Grå baggrund med gennemsigtighed
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background-color: white;
+  border: 2px solid black;
+  border-color: green; // Standard border farve (for "OK" og "Næppe")
+  padding: 20px;
+  text-align: center;
+}
+
+// Styling for knapper på overlay
+.overlay button {
+  width: 130px;
+  height: 50px;
+  border-radius: 25px; // Gør knapperne helt rundet
+  font-family: "Chomsky", sans-serif;
+  font-size: 30px;
+  color: blue;
+  cursor: pointer; // Gør cursor til en hånd når man hoverer
+  margin: 10px; // Tilføj lidt afstand mellem knapperne
+}
+
+// Styling for specifikke knapper på overlay (OK og Cancel)
+#overlay-ok button,
+#overlay-cancel button {
+  border-color: red; // Rød border
+}
+
+// Styling for knapper på overlay (Næppe og Ja)
+#overlay-naeppe button,
+#overlay-ja button {
+  border-color: green; // Grøn border
+}
+
+// Juster layoutet af knapperne på overlay (Næppe og Ja)
+#overlay-naeppe button,
+#overlay-ja button {
+  display: inline-block; // Gør knapperne vandrette ved siden af hinanden
+  vertical-align: middle; // Centrer knapperne vertikalt
+}
+    
 }
 
   //Styling af indhold i footer

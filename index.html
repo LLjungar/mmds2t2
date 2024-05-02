@@ -146,9 +146,6 @@
     
     <p>Redaktion følger foreløbigt udviklingen i sagen.</p>
 
-    <!-- Linje mellem indhold -->
-    <div class="divider-main"></div>
-
     <!-- Annonce 1 -->
     <div class="advertisement">
         <img src="img/fisk.png" alt="Billede af fisk og menneske der illustrerer hvordan vi alle kan blive fanget i cyberkriminalitet">
@@ -163,7 +160,9 @@
     </div>
 
 <!-- Knap til forgrenet scenarie -->
+<div class="around-button">
 <button class="custom-button" onclick="showModal(1)">Klik her</button>
+</div>
 
 <!-- Overlay til første valgmulighed -->
 <div id="overlay-first-1" class="overlay">
@@ -235,16 +234,18 @@
     <!-- Overskrift tredje artikel -->
     <h3>Malicious Software</h3>
 
-    <!-- Læs højt knap -->
-    <button id="read-aloud-button">
-        <i class="fas fa-volume-up"></i> <!-- Font Awesome ikon for lyd -->
-    </button>
-
      <!-- Linje mellem overskrift og fofatter -->
      <div class="small-divider-main"></div>
 
      <!-- Navn på forfatter -->
-     <h4>AF LIV ED ALLEURC</h4>
+     <div class="lydogjournalist">
+        <button id="read-aloud-button">
+          <i class="fas fa-volume-up"></i> <!-- Font Awesome ikon for lyd -->
+        </button>
+          <div class="author-name">
+            <h4>AF LIV ED ALLEURC</h4>
+          </div>
+    </div>
 
     <!-- Manchet -->
     <h5>Hvor fishing-kriminelle kan iklæde sig masker og tilmed opnå relationer til deres ofre, er malware-kriminelle kun tilstede i øjeblikket, i form af deres hærværk. Tilfælles har Malware og Phishing, at det er metoder til at tilgå andres følsomme oplysninger.</h5>
@@ -278,8 +279,9 @@
 
 
 <!-- Knap til forgrenet scenarie -->
+<div class="around-button">
 <button class="custom-button" onclick="showModal(2)">Klik her</button>
-
+</div>
 <!-- Overlay til første valgmulighed -->
 <div id="overlay-first-2" class="overlay">
     <div class="modal">
@@ -320,12 +322,12 @@
     <!-- Annonce 2-->
 <div class="advertisement">
     <h1 class="advertisement-heading">LE RÉSUMÉ</h1> 
-    <h4>ANNONCE</h4>
+    <h4 class="annonce-line">ANNONCE</h4>
     <p class="advertisement-manchet">Duften af sikkerhed. Med noter af friskhed, renhed og stabilitet. Få en beroligende og tryg duftoplevelse med Le Resumé, der med forskellige duftnoter og ingredienser som blandt andet enebær, lavendel og cedertræ fanger essensen af både længere tekster og ny viden.</p>
     <p class="advertisement-text">Vil du indkapsle følelsen af selvsikkerhed? Lad dig fortrylle af vores nyeste duft “Le Resumé”. Lad din duft tale for dig og fremstå alvidende og uovervindelig. Er du interesseret i et resumé? Klik nedenfor.</p>
     <img src="img/resume.png" alt="Billede af parfume inspireret af Coco Chanel No. 5 der illustreret her understøtter annoncens indhold">
    
-    <button id="read-aloud-button">
+    <button id="read-aloud-button-annonce">
         <i class="fas fa-volume-up"></i> <!-- Font Awesome ikon for lyd -->
     </button>
 
