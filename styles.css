@@ -68,7 +68,12 @@ h1 {
   font-family: chomsky;
 }
 
-h3, h5, cite {
+h3 {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+h5, cite {
   font-size: 20px;
 }
 
@@ -82,4 +87,82 @@ h4, .second-line {
 
 cite, p, h3, h5 {
   font-family: "Times New Roman", Times, serif;
+}
+
+body header header img {
+  width: 100%;
+  max-width: 10%;
+  height: auto;
+  display: block;
+}
+body main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+body main img:hover {
+  transform: scale(1.05);
+}
+body main #read-aloud-button, body main #read-aloud-button-annonce {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+}
+body main #read-aloud-button i, body main #read-aloud-button-annonce i {
+  color: #3373D2;
+  font-weight: bold;
+  font-size: 20px;
+}
+body main #read-aloud-button-annonce {
+  align-self: flex-start;
+}
+body main .lydogjournalist {
+  display: flex;
+  align-items: center;
+}
+body main #read-aloud-button {
+  margin-right: 10px;
+}
+body main .author-name {
+  border-top: 1px solid #333333;
+  padding-top: 10px;
+}
+body main h4 {
+  margin: 0;
+}
+body main .advertisement {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border: 2px solid black;
+  background-color: #F5F5DE;
+}
+body main .advertisement .annonce-line {
+  border-top: 1px solid #333333;
+  padding-top: 0;
+  width: 25%;
+  text-align: center;
+}
+body main .advertisement .advertisement-heading {
+  margin: 0;
+  font-size: 100px;
+  color: #AAAAAA;
+}
+@media screen and (max-width: 768px) {
+  body main .advertisement .advertisement-heading {
+    font-size: 85px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+}
+body footer footer img {
+  width: 100%;
+  max-width: 10%;
+  height: auto;
+  display: block;
 }/*# sourceMappingURL=styles.css.map */

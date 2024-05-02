@@ -8,6 +8,7 @@ $bg-color: #F5F5F5;
 $success-color: #65C855;
 $warning-color: #EB5242;
 $info-color: #3373D2;
+$heading-color: #AAAAAA;
 
 // Typografi og størrelser
 p, h2,.first-line {
@@ -27,7 +28,12 @@ h1 {
   font-family: chomsky;
 }
 
-h3, h5, cite {
+h3 {
+  font-size: 40px;
+  margin-bottom: 0; // Fjern mellemliggende plads under h3-elementet
+}
+
+h5, cite {
   font-size: 20px;
 }
 
@@ -43,4 +49,116 @@ cite, p, h3, h5 {
   font-family: 'Times New Roman', Times, serif;
 }
 
+
 //Styling af opsætning, mobile first 
+body {
+  //Styling af indhold i header
+  header {
+    //color: #65C855;
+    header img {
+      width: 100%;
+      max-width: 10%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  //Styling af indhold i main
+  main {
+    img {
+      width: 100%; // Gør billedet 100% af dets containerbredde
+      height: auto; // Bevar billedets aspektratio
+      display: block; // Fjern eventuelle mellemrum under billedet
+      margin: 0 auto; // Centrer billedet inden i dets container
+    }
+  
+    img:hover {
+      transform: scale(1.05); // Skalér billedet lidt ved hover
+    }  
+
+    //Læs højt knap
+    #read-aloud-button, #read-aloud-button-annonce {
+      border: none; // Fjern knapens kantlinje
+      background-color: transparent; // Gennemsigtig baggrund
+      padding: 10px; // Tilføj polstring for at øge knappens størrelse
+    }
+    
+    #read-aloud-button i, #read-aloud-button-annonce i {
+      color: $info-color; 
+      font-weight: bold; // Gør ikonet fed
+      font-size: 20px; // Juster ikonets størrelse
+    }
+
+    #read-aloud-button-annonce{
+      align-self: flex-start;
+    }
+
+
+    //Journalist og lydknap  
+    .lydogjournalist {
+      display: flex;
+      align-items: center; // Centrer indholdet lodret
+    }
+    
+    #read-aloud-button {
+      margin-right: 10px; // Tilføj en lille margen til højre for knappen
+    }
+
+    .author-name {
+      border-top: 1px solid $primary-color; // Tilføj en top border til navne-containeren
+      padding-top: 10px; // Tilføj en lille padding øverst
+    }
+
+     h4 {
+      margin: 0; // Fjern eventuel indvendig margin
+    }   
+
+    //Annoncer
+    .advertisement {
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center; 
+      padding-top: 5%;
+      padding-bottom: 5%;
+      border: 2px solid black;
+      background-color: $secondary-color;
+  
+      .annonce-line {
+          border-top: 1px solid $primary-color;
+          padding-top: 0;
+          width: 25%;
+          text-align: center;
+      }
+  
+      .advertisement-heading {
+          margin: 0;
+          font-size: 100px;
+          color: $heading-color;
+      }
+  
+      @media screen and (max-width: 768px) {
+          .advertisement-heading {
+              font-size: 85px;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+      }
+  }
+  
+  
+  
+  
+}
+
+  //Styling af indhold i footer
+  footer {
+    footer img {
+      width: 100%;
+      max-width: 10%;
+      height: auto;
+      display: block;
+    }
+  }
+}
