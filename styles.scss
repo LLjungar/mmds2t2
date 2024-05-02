@@ -152,7 +152,7 @@ body {
   }
   
   .divider-main {
-    border-top: 1px solid black; // Sort streg
+    border-top: 1px solid $primary-color; // Sort streg
     width: 100%; // 90% af bredden
     margin: 0 auto; // Centreret i forhold til parent container
     padding-top: 20px;
@@ -163,20 +163,19 @@ body {
     padding-bottom: 20px;
   }
 
- // Styling for custom-button
- .custom-button {
-  width: 200px; // Sæt bredden til 200px
-  height: 70px; // Sæt højden til 70px
-  border-radius: 100px; // Gør knappen helt rundet
-  background-color: $bg-color; // Baggrundsfarve
-  text-align: center; // Centrer tekst inden i knappen
-  font-size: 30px; // Skriftstørrelse
-  font-family: "Chomsky"; // Skrifttype
-  color: $info-color; // Skriftfarve
-  box-shadow: 0px 5px 15px $info-color;
-  border: none;
-}
-
+  .custom-button, .no-button, .yes-button, .next-button {
+    width: 200px; // Sæt bredden til 200px
+    height: 70px; // Sæt højden til 70px
+    border-radius: 100px; // Gør knappen helt rundet
+    background-color: #F5F5F5; // Direkte angivelse af baggrundsfarven
+    text-align: center; // Centrer tekst inden i knappen
+    font-size: 30px; // Skriftstørrelse
+    font-family: "Chomsky"; // Skrifttype
+    color: $info-color; // Skriftfarve
+    box-shadow: 0px 5px 15px $info-color;
+    border: none;
+  }
+  
 .around-button {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -186,70 +185,17 @@ body {
 }
 
 // Styling for overlay
-.overlay {
-  display: none; // Start med at skjule overlayers
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.5); // Grå baggrund med gennemsigtighed
-}
-
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  height: 600px;
-  background-color: white;
-  border: 2px solid black;
-  border-color: green; // Standard border farve (for "OK" og "Næppe")
-  padding: 20px;
-  text-align: center;
+  border: 2px solid $primary-color; /* Ændr kantfarven her */
+  background-color: $bg-color;
+}
 }
 
-// Styling for knapper på overlay
-.overlay button {
-  width: 130px;
-  height: 50px;
-  border-radius: 25px; // Gør knapperne helt rundet
-  font-family: "Chomsky", sans-serif;
-  font-size: 30px;
-  color: blue;
-  cursor: pointer; // Gør cursor til en hånd når man hoverer
-  margin: 10px; // Tilføj lidt afstand mellem knapperne
+//Styling af indhold i footer
+footer img {
+  width: 100%;
+  max-width: 10%;
+  height: auto;
+  display: block;
 }
-
-// Styling for specifikke knapper på overlay (OK og Cancel)
-#overlay-ok button,
-#overlay-cancel button {
-  border-color: red; // Rød border
-}
-
-// Styling for knapper på overlay (Næppe og Ja)
-#overlay-naeppe button,
-#overlay-ja button {
-  border-color: green; // Grøn border
-}
-
-// Juster layoutet af knapperne på overlay (Næppe og Ja)
-#overlay-naeppe button,
-#overlay-ja button {
-  display: inline-block; // Gør knapperne vandrette ved siden af hinanden
-  vertical-align: middle; // Centrer knapperne vertikalt
-}
-    
-}
-
-  //Styling af indhold i footer
-  footer {
-    footer img {
-      width: 100%;
-      max-width: 10%;
-      height: auto;
-      display: block;
-    }
-  }
 }

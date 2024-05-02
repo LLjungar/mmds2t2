@@ -169,7 +169,7 @@ body main .advertisement .advertisement-heading {
   }
 }
 body main .divider-main {
-  border-top: 1px solid black;
+  border-top: 1px solid #333333;
   width: 100%;
   margin: 0 auto;
   padding-top: 20px;
@@ -178,7 +178,7 @@ body main .divider-main {
 body main .samtale {
   padding-bottom: 20px;
 }
-body main .custom-button {
+body main .custom-button, body main .no-button, body main .yes-button, body main .next-button {
   width: 200px;
   height: 70px;
   border-radius: 100px;
@@ -197,52 +197,11 @@ body main .around-button {
   align-items: center;
   justify-content: center;
 }
-body main .overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.5);
-}
 body main .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  height: 600px;
-  background-color: white;
-  border: 2px solid black;
-  border-color: green;
-  padding: 20px;
-  text-align: center;
+  border: 2px solid #333333; /* Ændr kantfarven her */
+  background-color: #F5F5F5;
 }
-body main .overlay button {
-  width: 130px;
-  height: 50px;
-  border-radius: 25px;
-  font-family: "Chomsky", sans-serif;
-  font-size: 30px;
-  color: blue;
-  cursor: pointer;
-  margin: 10px;
-}
-body main #overlay-ok button,
-body main #overlay-cancel button {
-  border-color: red;
-}
-body main #overlay-naeppe button,
-body main #overlay-ja button {
-  border-color: green;
-}
-body main #overlay-naeppe button,
-body main #overlay-ja button {
-  display: inline-block;
-  vertical-align: middle;
-}
-body footer footer img {
+body footer img {
   width: 100%;
   max-width: 10%;
   height: auto;
