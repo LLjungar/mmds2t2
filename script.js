@@ -42,6 +42,23 @@ document.addEventListener("DOMContentLoaded", function() {
       overlay.style.display = "none"; // Skjul alle overlayers
     });
   }
+//til ok og cancel
+function showOkModal(buttonId) {
+    var overlayFirst = document.getElementById("overlay-first-" + buttonId);
+    overlayFirst.style.display = "none"; // Skjul første overlay
+    var overlayOk = document.getElementById("overlay-ok");
+    overlayOk.style.display = "flex"; // Vis overlay for "OK"
+  }
+  
+  function showCancelModal(buttonId) {
+    var overlayFirst = document.getElementById("overlay-first-" + buttonId);
+    overlayFirst.style.display = "none"; // Skjul første overlay
+    var overlayCancel = document.getElementById("overlay-cancel");
+    overlayCancel.style.display = "flex"; // Vis overlay for "Cancel"
+  }
+  
+  
+
   
 
 //Rød klat, så musen ikke bliver væk for svagtseende

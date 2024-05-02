@@ -1,17 +1,4 @@
-@use 'overlay';
+@use 'overlays';
+@use 'extra';
+@use 'variables';
 
-body {
-  /*Rød klat, så musen ikke bliver væk for svagtseende*/
-  cursor: none; // Skjul den standard musemarkør
-}
-
-/*Rød klat, så musen ikke bliver væk for svagtseende*/
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  background-color: #EB5042; // Rød farve - kan ændres efter behov
-  border-radius: 50%; // Rundet form
-  position: absolute;
-  pointer-events: none; // Gør cursor usynlig for museevents
-  z-index: 9999; // Sørg for, at cursor er øverst
-}
