@@ -1,4 +1,4 @@
-//sprog navigation 
+// Sprognavigation
 document.addEventListener("DOMContentLoaded", function() {
     var dropdownBtn = document.querySelector(".dropbtn");
     var dropdownContent = document.querySelector(".dropdown-content");
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 
 
 //Burgermenu med overlay og klik

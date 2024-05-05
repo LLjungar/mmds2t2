@@ -57,23 +57,37 @@ body {
   margin: 0;
   padding: 2%;
   background-color: #F5F5F5;
+  /* Sprogmenu styling */
+}
+body .lang-nav {
+  position: relative; /* Positioner containeren relativt for korrekt placering af dropdown-menu */
+}
+body .dropdown {
+  list-style: none;
+}
+body .dropbtn:active,
+body .dropbtn:visited {
+  color: inherit; /* Behold farven fra forældrelementet */
 }
 body .dropdown-content {
   display: none; /* Start med at skjule dropdown-menuen */
   position: absolute;
-  background-color: #fff; /* Baggrundsfarve */
+  background-color: #F5F5F5; /* Baggrundsfarve */
   min-width: 160px; /* Minimumsbredde */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Skyggeeffekt */
   z-index: 1; /* Placer dropdown-menuen foran alt andet indhold */
+  padding: 0; /* Fjern polstring */
+  list-style: none; /* Fjern listestyling */
+  border: none; /* Fjern kant */
 }
 body .dropdown-content a {
-  color: black; /* Tekstfarve */
+  color: #333333; /* Tekstfarve */
   padding: 12px 16px; /* Polstring */
   text-decoration: none; /* Fjern understregning */
   display: block; /* Gør links til blokke for korrekt placering */
 }
 body .dropdown-content a:hover {
-  background-color: #f1f1f1; /* Baggrundsfarve ved hover */
+  background-color: #F5F5F5; /* Baggrundsfarve ved hover */
 }
 body .show {
   display: block; /* Vis dropdown-menuen når klassen 'show' tilføjes */
