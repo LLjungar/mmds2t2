@@ -54,6 +54,20 @@ body {
   margin: 0; // Fjern standard margin på body-elementet
   padding: 2%; // Fjern standard padding på body-elementet
   background-color: $bg-color;
+  box-sizing: border-box;
+
+  // Almindelig stil for hovedcontaineren
+.body-container {
+  max-width: 1200px; // Tilpas efter dine behov
+  margin: 0 auto; // Centrerer containeren vandret
+  padding: 0 20px; // Tilføj padding på begge sider
+
+  // Medieforespørgsel for større skærme
+  @media screen and (min-width: 768px) {
+    padding: 0; // Fjern padding på mindre skærme
+  }
+}
+
 
 //Første header
 //grid i første header
@@ -190,13 +204,12 @@ body {
 }
 
 .modal-nav ul li a:hover {
-  color: #ffcc00;
+  color: $info-color;
 }
 
 
   //Styling af indhold i main
   main {
-    padding: 2%;
       img {
       width: 100%; // Gør billedet 100% af dets containerbredde
       height: auto; // Bevar billedets aspektratio
@@ -269,6 +282,7 @@ body {
           margin: 0;
           font-size: 100px;
           color: $heading-color;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
   
       @media screen and (max-width: 768px) {
@@ -366,9 +380,53 @@ body {
 
 //Styling af indhold i footer
 footer img {
-  width: 100%;
-  max-width: 10%;
+  max-width: 50%;
   height: auto;
   display: block;
 }
+
+.footer-grid {
+  padding-top: 5em;
+}
+
+//grid i første header
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige bredde */
+  grid-template-rows: auto; /* Automatisk højde baseret på indhold */
+  gap: 10px; /* Mellemrum mellem elementer */
+}
+
+.logo-footer {
+  grid-column: 1 / 2; /* Placer dette element fra kolonne 1 til kolonne 2 */
+  grid-row: 1; /* Placer dette element i række 1 */
+  padding-top: 1.1em;
+}
+.p-footer {
+  grid-column: 2 / 3; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 1; /* Placer dette element i række 1 */
+}
+.footer-nav {
+  grid-column: 3 / 4; /* Placer dette element fra kolonne 2 til kolonne 3 */
+  grid-row: 1; /* Placer dette element i række 1 */
+}
+
+.menu-items{
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.footer-nav ul li a:hover {
+  color: $info-color;
+}
+
+
 }
