@@ -58,6 +58,37 @@ body {
   padding: 2%;
   background-color: #F5F5F5;
   /* Sprogmenu styling */
+  /* Burgermenu styling */
+}
+body .header-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige bredde */
+  grid-template-rows: auto; /* Automatisk højde baseret på indhold */
+  gap: 10px; /* Mellemrum mellem elementer */
+}
+body .logo-header {
+  grid-column: 1/2; /* Placer dette element fra kolonne 1 til kolonne 2 */
+  grid-row: 1; /* Placer dette element i række 1 */
+  align-self: center;
+  padding-left: 1em;
+}
+body .lang-nav {
+  grid-column: 3/3; /* Placer dette element fra kolonne 2 til kolonne 3 */
+  grid-row: 1; /* Placer dette element i række 1 */
+  align-self: center;
+}
+body .burger-container {
+  grid-column: 4/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 1; /* Placer dette element i række 1 */
+  align-self: center;
+  padding-right: 1em;
+}
+body .dropbtn .fa-globe,
+body .dropbtn .fa-chevron-down {
+  font-size: 24px; /* Ændr størrelsen efter behov */
+}
+body .burger-icon .fa-burger {
+  font-size: 24px; /* Ændr størrelsen efter behov */
 }
 body .lang-nav {
   position: relative; /* Positioner containeren relativt for korrekt placering af dropdown-menu */

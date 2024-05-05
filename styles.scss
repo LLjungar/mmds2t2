@@ -54,10 +54,49 @@ body {
   margin: 0; // Fjern standard margin på body-elementet
   padding: 2%; // Fjern standard padding på body-elementet
   background-color: $bg-color;
-  //Styling af indhold i header
 
 //Første header
+//grid i første header
+.header-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige bredde */
+  grid-template-rows: auto; /* Automatisk højde baseret på indhold */
+  gap: 10px; /* Mellemrum mellem elementer */
+}
+
+.logo-header {
+  grid-column: 1 / 2; /* Placer dette element fra kolonne 1 til kolonne 2 */
+  grid-row: 1; /* Placer dette element i række 1 */
+  align-self: center;
+  padding-left: 1em;
+}
+
+.lang-nav {
+  grid-column: 3 / 3; /* Placer dette element fra kolonne 2 til kolonne 3 */
+  grid-row: 1; /* Placer dette element i række 1 */
+  align-self: center;
+}
+
+.burger-container {
+  grid-column: 4 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 1; /* Placer dette element i række 1 */
+  align-self: center;
+  padding-right: 1em;
+}
+
 /* Sprogmenu styling */
+.dropbtn .fa-globe,
+.dropbtn .fa-chevron-down {
+    font-size: 24px; /* Ændr størrelsen efter behov */
+}
+
+/* Burgermenu styling */
+.burger-icon .fa-burger {
+    font-size: 24px; /* Ændr størrelsen efter behov */
+}
+
+
+//Sprogmenu styling
 .lang-nav {
     position: relative; /* Positioner containeren relativt for korrekt placering af dropdown-menu */
 }
