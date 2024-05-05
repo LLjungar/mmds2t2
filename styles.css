@@ -31,6 +31,10 @@ h1 {
   font-size: 100px;
   font-family: chomsky;
 }
+@font-face {
+  font-family: "Chomsky";
+  src: url(font/Chomsky.otf) format("woff2");
+}
 
 h3 {
   font-size: 40px;
@@ -71,28 +75,86 @@ body .body-container {
     padding: 0;
   }
 }
+body .divider-header, body .divider-header-2 {
+  border-top: 2px solid #333333;
+  width: 100%;
+  margin: 0 auto;
+}
 body .header-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige bredde */
   grid-template-rows: auto; /* Automatisk højde baseret på indhold */
   gap: 10px; /* Mellemrum mellem elementer */
 }
-body .logo-header {
+body .header-1 .logo-header {
   grid-column: 1/2; /* Placer dette element fra kolonne 1 til kolonne 2 */
   grid-row: 1; /* Placer dette element i række 1 */
   align-self: center;
   padding-left: 1em;
 }
-body .lang-nav {
+body .header-1 .lang-nav {
   grid-column: 3/3; /* Placer dette element fra kolonne 2 til kolonne 3 */
   grid-row: 1; /* Placer dette element i række 1 */
   align-self: center;
 }
-body .burger-container {
+body .header-1 .burger-container {
   grid-column: 4/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
   grid-row: 1; /* Placer dette element i række 1 */
   align-self: center;
   padding-right: 1em;
+}
+body .header-1 .divider-header {
+  grid-column: 1/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 2; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+}
+body .header-1 h1 {
+  grid-column: 1/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 3; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+body .header-1 .divider-header {
+  grid-column: 1/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 4; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+}
+body .header-1 .left-section {
+  grid-column: 1/2; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 5; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0em;
+}
+body .header-1 .center-section {
+  grid-column: 2/3; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 5; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0em;
+}
+body .header-1 .right-section {
+  grid-column: 3/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 5; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0em;
+}
+body .header-1 .divider-header-2 {
+  grid-column: 1/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 6; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+}
+body .header-1 p {
+  grid-column: 1/4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 7; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
 }
 body .dropbtn .fa-globe,
 body .dropbtn .fa-chevron-down {
@@ -100,6 +162,7 @@ body .dropbtn .fa-chevron-down {
 }
 body .burger-icon .fa-burger {
   font-size: 24px; /* Ændr størrelsen efter behov */
+  color: inherit; /* Behold farven fra forældrelementet */
 }
 body .lang-nav {
   position: relative; /* Positioner containeren relativt for korrekt placering af dropdown-menu */
@@ -185,6 +248,29 @@ body main img {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+body main .main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+body main .main-container main {
+  grid-column: span 4;
+}
+body main .main-container .divider-main {
+  grid-column: span 4;
+}
+body main .main-container .lydogjournalist {
+  grid-column: span 4;
+}
+body main .main-container .brevdue {
+  grid-column: span 2;
+}
+body main .main-container .advertisement {
+  grid-column: span 4;
+}
+body main .main-container .around-button {
+  grid-column: span 4;
 }
 body main img:hover {
   transform: scale(1.05);

@@ -25,6 +25,12 @@ h2,.first-line {
 h1 {
   font-size: 100px;
   font-family: chomsky;
+
+  //importeret font: Copyright (c) 2019-2021, Fredrick Brennan. Brugt for at efterligne New York Times bedst muligt/for/association til avis
+  @font-face {
+    font-family: 'Chomsky';
+    src: url(font/Chomsky.otf)format('woff2'), /* WOFF2 format */;
+  }
 }
 
 h3 {
@@ -68,15 +74,19 @@ body {
   }
 }
 
+.divider-header, .divider-header-2 {
+  border-top: 2px solid $primary-color; 
+    width: 100%; // 90% af bredden
+    margin: 0 auto; // Centreret i forhold til parent container
+}
 
-//Første header
-//grid i første header
+
+//grid i  header
 .header-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige bredde */
   grid-template-rows: auto; /* Automatisk højde baseret på indhold */
   gap: 10px; /* Mellemrum mellem elementer */
-}
 
 .logo-header {
   grid-column: 1 / 2; /* Placer dette element fra kolonne 1 til kolonne 2 */
@@ -98,6 +108,71 @@ body {
   padding-right: 1em;
 }
 
+.divider-header {
+  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 2; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+}
+
+h1 {
+  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 3; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+.divider-header {
+  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 4; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+}
+
+.left-section {
+  grid-column: 1 / 2; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 5; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0em;
+}
+
+.center-section {
+  grid-column: 2 / 3; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 5; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0em;
+}
+
+.right-section {
+  grid-column: 3 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 5; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+  margin-top: 0em;
+}
+
+.divider-header-2 {
+  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 6; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+}
+
+p {
+  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
+  grid-row: 7; /* Placer dette element i række 1 */
+  align-self: center;
+  text-align: center;
+}
+}
+
+
+
+
 /* Sprogmenu styling */
 .dropbtn .fa-globe,
 .dropbtn .fa-chevron-down {
@@ -107,6 +182,7 @@ body {
 /* Burgermenu styling */
 .burger-icon .fa-burger {
     font-size: 24px; /* Ændr størrelsen efter behov */
+    color: inherit; /* Behold farven fra forældrelementet */
 }
 
 
@@ -207,7 +283,6 @@ body {
   color: $info-color;
 }
 
-
   //Styling af indhold i main
   main {
       img {
@@ -217,6 +292,39 @@ body {
       margin: 0 auto; // Centrer billedet inden i dets container
     }
   
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Opretter 4 kolonner med samme bredde
+  grid-gap: 20px; // Afstand mellem grid-elementer
+
+}
+
+// Stilregler for specifikke elementer inden i gridet
+.main-container main {
+  grid-column: span 4; // Elementet strækker sig over 4 kolonner
+}
+
+.main-container .divider-main {
+  grid-column: span 4; // Linjer strækker sig over 4 kolonner
+}
+
+.main-container .lydogjournalist {
+  grid-column: span 4; // Elementet strækker sig over 4 kolonner
+}
+
+.main-container .brevdue {
+  grid-column: span 2; // Billedet strækker sig over 2 kolonner
+}
+
+.main-container .advertisement {
+  grid-column: span 4; // Elementet strækker sig over 4 kolonner
+}
+
+.main-container .around-button {
+  grid-column: span 4; // Knappen strækker sig over 4 kolonner
+}
+
+    
     img:hover {
       transform: scale(1.05); // Skalér billedet lidt ved hover
     }  
@@ -427,6 +535,5 @@ footer img {
 .footer-nav ul li a:hover {
   color: $info-color;
 }
-
 
 }
