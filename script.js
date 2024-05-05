@@ -1,3 +1,4 @@
+//sprog navigation 
 document.addEventListener("DOMContentLoaded", function() {
     var dropdownBtn = document.querySelector(".dropbtn");
     var dropdownContent = document.querySelector(".dropdown-content");
@@ -15,6 +16,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+//Burgermenu med overlay og klik
+document.addEventListener("DOMContentLoaded", function() {
+  var burgerIcon = document.querySelector(".burger-icon");
+  var overlay = document.querySelector(".overlay-nav");
+
+  // Eventlytter for burgerikonet
+  burgerIcon.addEventListener("click", function() {
+      overlay.style.display = "flex"; // Vis overlayet når burgerikonet klikkes
+  });
+
+  // Eventlytter for overlayet
+  overlay.addEventListener("click", function(event) {
+      // Kontrollerer om klikket ikke er på selve modalen (dvs. indholdet)
+      if (!event.target.closest(".modal-nav")) {
+          overlay.style.display = "none"; // Skjul overlayet
+      }
+  });
+});
 
 //Klik her-knap 1 og 2
   function showModal(buttonId) {

@@ -1,4 +1,3 @@
-@use 'overlays';
 @use 'extra';
 
 // Farver
@@ -53,18 +52,90 @@ cite, p, h3, h5 {
 //Styling af opsætning, mobile first 
 body {
   margin: 0; // Fjern standard margin på body-elementet
-  padding: 0; // Fjern standard padding på body-elementet
+  padding: 2%; // Fjern standard padding på body-elementet
   background-color: $bg-color;
   //Styling af indhold i header
-  header {
-    //color: #65C855;
-    header img {
-      width: 100%;
-      max-width: 10%;
-      height: auto;
-      display: block;
-    }
-  }
+
+//Sprog navigation
+  .dropdown-content {
+    display: none; /* Start med at skjule dropdown-menuen */
+    position: absolute;
+    background-color: #fff; /* Baggrundsfarve */
+    min-width: 160px; /* Minimumsbredde */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Skyggeeffekt */
+    z-index: 1; /* Placer dropdown-menuen foran alt andet indhold */
+}
+
+.dropdown-content a {
+    color: black; /* Tekstfarve */
+    padding: 12px 16px; /* Polstring */
+    text-decoration: none; /* Fjern understregning */
+    display: block; /* Gør links til blokke for korrekt placering */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Baggrundsfarve ved hover */
+}
+
+.show {
+    display: block; /* Vis dropdown-menuen når klassen 'show' tilføjes */
+}
+
+//Burgermenu
+.burger-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.overlay-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-gennemsigtig baggrund */
+  display: none; /* Start skjult */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-nav {
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
+  border: 2px solid $primary-color; /* Ændr kantfarven her */
+  background-color: $bg-color;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Sikrer, at indholdet er stablet lodret */
+  justify-content: center; /* Centrer lodret */
+  align-items: center; /* Centrer vandret */
+}
+
+.modal-nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.modal-nav ul li {
+  margin-bottom: 20px;
+}
+
+.modal-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.modal-nav ul li a:hover {
+  color: #ffcc00;
+}
+
 
   //Styling af indhold i main
   main {
@@ -163,11 +234,10 @@ body {
     padding-bottom: 20px;
   }
 
+//Styling af klik-her-knapper
   .custom-button, .no-button, .yes-button, .next-button {
-    width: 200px; // Sæt bredden til 200px
-    height: 70px; // Sæt højden til 70px
     border-radius: 100px; // Gør knappen helt rundet
-    background-color: #F5F5F5; // Direkte angivelse af baggrundsfarven
+    background-color: $bg-color; // Direkte angivelse af baggrundsfarven
     text-align: center; // Centrer tekst inden i knappen
     font-size: 30px; // Skriftstørrelse
     font-family: "Chomsky"; // Skrifttype
@@ -175,7 +245,19 @@ body {
     box-shadow: 0px 5px 15px $info-color;
     border: none;
   }
-  
+
+//Stor klik-her-knap
+  .custom-button{
+  width: 200px; // Sæt bredden til 200px
+  height: 70px; // Sæt højden til 70px
+}
+
+//Lille klik-her-knap
+.no-button, .yes-button, .next-button{
+  width: 135px; // Sæt bredden til 200px
+  height: 50px; // Sæt højden til 70px
+}
+
 .around-button {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -185,9 +267,43 @@ body {
 }
 
 // Styling for overlay
-.modal {
-  border: 2px solid $primary-color; /* Ændr kantfarven her */
-  background-color: $bg-color;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-gennemsigtig baggrund */
+  display: none; /* Start skjult */
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    border: 2px solid $primary-color; /* Ændr kantfarven her */
+    background-color: $bg-color;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin-bottom: 20px;
+      text-align: center; /* Centrer tekst i <p> elementer */
+    }
+
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      border: none;
+      background-color: $bg-color;
+      color: $info-color;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  }
 }
 }
 

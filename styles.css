@@ -1,40 +1,4 @@
 @charset "UTF-8";
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-gennemsigtig baggrund */
-  display: none; /* Start skjult */
-  justify-content: center;
-  align-items: center;
-}
-.overlay .modal {
-  width: 80%;
-  max-width: 600px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-}
-.overlay .modal p {
-  margin-bottom: 20px;
-}
-.overlay .modal button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  border: none;
-  background-color: #007bff; /* Blå farve */
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.overlay .modal button:hover {
-  background-color: #0056b3; /* Mørkere blå farve ved hover */
-}
-
 body {
   /*Rød klat, så musen ikke bliver væk for svagtseende*/
   cursor: none;
@@ -91,14 +55,74 @@ cite, p, h3, h5 {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 2%;
   background-color: #F5F5F5;
 }
-body header header img {
+body .dropdown-content {
+  display: none; /* Start med at skjule dropdown-menuen */
+  position: absolute;
+  background-color: #fff; /* Baggrundsfarve */
+  min-width: 160px; /* Minimumsbredde */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Skyggeeffekt */
+  z-index: 1; /* Placer dropdown-menuen foran alt andet indhold */
+}
+body .dropdown-content a {
+  color: black; /* Tekstfarve */
+  padding: 12px 16px; /* Polstring */
+  text-decoration: none; /* Fjern understregning */
+  display: block; /* Gør links til blokke for korrekt placering */
+}
+body .dropdown-content a:hover {
+  background-color: #f1f1f1; /* Baggrundsfarve ved hover */
+}
+body .show {
+  display: block; /* Vis dropdown-menuen når klassen 'show' tilføjes */
+}
+body .burger-container {
+  position: relative;
+  cursor: pointer;
+}
+body .burger-menu {
+  display: none;
+}
+body .overlay-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 10%;
-  height: auto;
-  display: block;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-gennemsigtig baggrund */
+  display: none; /* Start skjult */
+  justify-content: center;
+  align-items: center;
+}
+body .modal-nav {
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
+  border: 2px solid #333333; /* Ændr kantfarven her */
+  background-color: #F5F5F5;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Sikrer, at indholdet er stablet lodret */
+  justify-content: center; /* Centrer lodret */
+  align-items: center; /* Centrer vandret */
+}
+body .modal-nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+body .modal-nav ul li {
+  margin-bottom: 20px;
+}
+body .modal-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+body .modal-nav ul li a:hover {
+  color: #ffcc00;
 }
 body main {
   padding: 2%;
@@ -179,8 +203,6 @@ body main .samtale {
   padding-bottom: 20px;
 }
 body main .custom-button, body main .no-button, body main .yes-button, body main .next-button {
-  width: 200px;
-  height: 70px;
   border-radius: 100px;
   background-color: #F5F5F5;
   text-align: center;
@@ -190,6 +212,14 @@ body main .custom-button, body main .no-button, body main .yes-button, body main
   box-shadow: 0px 5px 15px #3373D2;
   border: none;
 }
+body main .custom-button {
+  width: 200px;
+  height: 70px;
+}
+body main .no-button, body main .yes-button, body main .next-button {
+  width: 135px;
+  height: 50px;
+}
 body main .around-button {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -197,9 +227,40 @@ body main .around-button {
   align-items: center;
   justify-content: center;
 }
-body main .modal {
+body main .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-gennemsigtig baggrund */
+  display: none; /* Start skjult */
+  justify-content: center;
+  align-items: center;
+}
+body main .overlay .modal {
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
   border: 2px solid #333333; /* Ændr kantfarven her */
   background-color: #F5F5F5;
+  justify-content: center;
+  align-items: center;
+}
+body main .overlay .modal p {
+  margin-bottom: 20px;
+  text-align: center; /* Centrer tekst i <p> elementer */
+}
+body main .overlay .modal button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #F5F5F5;
+  color: #3373D2;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 body footer img {
   width: 100%;
