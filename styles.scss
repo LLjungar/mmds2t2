@@ -279,6 +279,77 @@ p {
 }
 
 // MAIN
+
+// MAIN: Grid
+main {
+  
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    max-width: 1200px;
+    grid-gap: 5px;
+
+    .divider-main {
+      grid-column: 1 / 5;
+      grid-row: 1; 
+    }
+    
+    .overskrift-1 {
+      grid-column: 1 / 1; 
+      grid-row: 2;
+    }
+
+    .lyd-1 {
+      grid-column: 1 / 1; 
+      grid-row: 3;
+    }
+
+    .manchet-1 {
+      grid-column: 1 / 1; 
+      grid-row: 3;
+    }
+
+    .p-1 {
+      grid-column: 1 / 1; 
+      grid-row: 4;
+    }
+
+    .p-2 {
+      grid-column: 1 / 1; 
+      grid-row: 5;
+    }
+
+    .brevdue {
+      grid-column: 2 / 4; 
+      grid-row: span 6;
+      max-width: 100%;
+    }
+
+    blockquote {
+      grid-column: 4 / 5; 
+      grid-row: 2;
+      justify-self: center; 
+      align-self: center;
+    }
+
+    .p-3 {
+      grid-column: 4 / 5; 
+      grid-row: 3;
+    }
+
+    .p-4 {
+      grid-column: 4 / 5; 
+      grid-row: 4;
+    }
+
+    .p-5 {
+      grid-column: 4 / 5;
+      grid-row: 5;
+    }
+  }
+}
+  
+// MAIN: Billeder
 main {
       img {
       width: 100%; 
@@ -286,44 +357,12 @@ main {
       display: block; 
       margin: 0 auto; 
     }
-  
-       
+   
     img:hover {
       transform: scale(1.05); // Skalér billedet lidt ved hover
     }  
-
-
-.main-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  grid-gap: 20px; 
-}
-
-// Main: Stilregler for specifikke elementer inden i gridet
-.main-container main {
-  grid-column: span 4; // Elementet strækker sig over 4 kolonner
-}
-
-.main-container .divider-main {
-  grid-column: span 4; // Linjer strækker sig over 4 kolonner
-}
-
-.main-container .lydogjournalist {
-  grid-column: span 4; // Elementet strækker sig over 4 kolonner
-}
-
-.main-container .brevdue {
-  grid-column: span 2; // Billedet strækker sig over 2 kolonner
-}
-
-.main-container .advertisement {
-  grid-column: span 4; // Elementet strækker sig over 4 kolonner
-}
-
-.main-container .around-button {
-  grid-column: span 4; // Knappen strækker sig over 4 kolonner
-}
-
+    }
+    
 
   // MAIN: Journalist- og lydknap  
     #read-aloud-button, #read-aloud-button-annonce {
@@ -482,6 +521,7 @@ main {
 }
 }
 
+
 // FOOTER
 footer img {
   max-width: 50%;
@@ -529,5 +569,4 @@ footer img {
 
 .footer-nav ul li a:hover {
   color: $info-color;
-}
 }
