@@ -1,6 +1,6 @@
 @use 'extra';
 
-// Farver
+// FARVER
 $primary-color: #333333;
 $secondary-color: #F5F5DE;
 $bg-color: #F5F5F5;
@@ -9,7 +9,7 @@ $warning-color: #EB5242;
 $info-color: #3373D2;
 $heading-color: #AAAAAA;
 
-// Typografi og størrelser
+// TYPOGRAFIER
 p, h2,.first-line {
   font-size: 16px;
 }
@@ -26,7 +26,7 @@ h1 {
   font-size: 100px;
   font-family: chomsky;
 
-  //importeret font: Copyright (c) 2019-2021, Fredrick Brennan. Brugt for at efterligne New York Times bedst muligt/for/association til avis
+  //importeret font: Copyright (c) 2019-2021, Fredrick Brennan. Brugt for at efterligne The New York Times bedst muligt/for/association til avis
   @font-face {
     font-family: 'Chomsky';
     src: url(font/Chomsky.otf)format('woff2'), /* WOFF2 format */;
@@ -35,7 +35,7 @@ h1 {
 
 h3 {
   font-size: 40px;
-  margin-bottom: 0; // Fjern mellemliggende plads under h3-elementet
+  margin-bottom: 0; 
 }
 
 h5, cite {
@@ -55,69 +55,66 @@ cite, p, h3, h5 {
 }
 
 
-//Styling af opsætning, mobile first 
+// BODY
 body {
-  margin: 0; // Fjern standard margin på body-elementet
-  padding: 2%; // Fjern standard padding på body-elementet
+  margin: 0; 
+  padding: 2%; 
   background-color: $bg-color;
   box-sizing: border-box;
 
-  // Almindelig stil for hovedcontaineren
 .body-container {
-  max-width: 1200px; // Tilpas efter dine behov
-  margin: 0 auto; // Centrerer containeren vandret
-  padding: 0 20px; // Tilføj padding på begge sider
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px;
 
-  // Medieforespørgsel for større skærme
   @media screen and (min-width: 768px) {
-    padding: 0; // Fjern padding på mindre skærme
+    padding: 0; // uden padding på mindre skærme
   }
 }
 
+
+// HEADER
 .divider-header, .divider-header-2 {
   border-top: 2px solid $primary-color; 
-    width: 100%; // 90% af bredden
-    margin: 0 auto; // Centreret i forhold til parent container
+    width: 100%; 
+    margin: 0 auto; 
 }
 
-
-//grid i  header
+//HEADER: Grid i  header
 .header-1 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige bredde */
-  grid-template-rows: auto; /* Automatisk højde baseret på indhold */
-  gap: 10px; /* Mellemrum mellem elementer */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: auto; 
+  gap: 10px; 
 
 .logo-header {
-  grid-column: 1 / 2; /* Placer dette element fra kolonne 1 til kolonne 2 */
-  grid-row: 1; /* Placer dette element i række 1 */
+  grid-column: 1 / 2; 
+  grid-row: 1; 
   align-self: center;
   padding-left: 1em;
 }
 
 .lang-nav {
-  grid-column: 3 / 3; /* Placer dette element fra kolonne 2 til kolonne 3 */
-  grid-row: 1; /* Placer dette element i række 1 */
+  grid-column: 3 / 3; 
+  grid-row: 1; 
   align-self: center;
+  text-align: right;
+
+  @media only screen and (min-width: 768px) {
+    padding-right: 2em;
+}
 }
 
 .burger-container {
-  grid-column: 4 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 1; /* Placer dette element i række 1 */
+  grid-column: 4 / 4; 
+  grid-row: 1; 
   align-self: center;
   padding-right: 1em;
 }
 
-.divider-header {
-  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 2; /* Placer dette element i række 1 */
-  align-self: center;
-  text-align: center;
-}
-
 h1 {
-  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 3; /* Placer dette element i række 1 */
+  grid-column: 1 / 5; 
+  grid-row: 2; 
   align-self: center;
   text-align: center;
   margin-top: 0.5em;
@@ -125,70 +122,63 @@ h1 {
 }
 
 .divider-header {
-  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 4; /* Placer dette element i række 1 */
+  grid-column: 1 / 5; 
+  grid-row: 3; 
   align-self: center;
   text-align: center;
 }
 
 .left-section {
-  grid-column: 1 / 2; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 5; /* Placer dette element i række 1 */
+  grid-column: 1 / 2; 
+  grid-row: 4;
   align-self: center;
   text-align: center;
   margin-top: 0em;
+  padding-left: 1em;
 }
 
 .center-section {
-  grid-column: 2 / 3; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 5; /* Placer dette element i række 1 */
+  grid-column: 2 / 3; 
+  grid-row: 4; 
   align-self: center;
   text-align: center;
   margin-top: 0em;
+  padding-left: 2em;
 }
 
 .right-section {
-  grid-column: 3 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 5; /* Placer dette element i række 1 */
+  grid-column: 3 / 5; 
+  grid-row: 4; 
   align-self: center;
   text-align: center;
   margin-top: 0em;
 }
 
 .divider-header-2 {
-  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 6; /* Placer dette element i række 1 */
+  grid-column: 1 / 5; 
+  grid-row: 5; 
   align-self: center;
   text-align: center;
 }
 
 p {
-  grid-column: 1 / 4; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 7; /* Placer dette element i række 1 */
+  grid-column: 1 / 5; 
+  grid-row: 6; 
   align-self: center;
   text-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 }
 
-
-
-
-/* Sprogmenu styling */
+//HEADER: Sprogmenu
 .dropbtn .fa-globe,
 .dropbtn .fa-chevron-down {
     font-size: 24px; /* Ændr størrelsen efter behov */
 }
 
-/* Burgermenu styling */
-.burger-icon .fa-burger {
-    font-size: 24px; /* Ændr størrelsen efter behov */
-    color: inherit; /* Behold farven fra forældrelementet */
-}
-
-
-//Sprogmenu styling
 .lang-nav {
-    position: relative; /* Positioner containeren relativt for korrekt placering af dropdown-menu */
+    position: relative; 
 }
 
 .dropdown{
@@ -197,38 +187,43 @@ p {
 
 .dropbtn:active,
 .dropbtn:visited {
-    color: inherit; /* Behold farven fra forældrelementet */
+    color: inherit; 
 }
 
 .dropdown-content {
-    display: none; /* Start med at skjule dropdown-menuen */
+    display: none; 
     position: absolute;
-    background-color: $bg-color; /* Baggrundsfarve */
-    min-width: 160px; /* Minimumsbredde */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Skyggeeffekt */
-    z-index: 1; /* Placer dropdown-menuen foran alt andet indhold */
-    padding: 0; /* Fjern polstring */
-    list-style: none; /* Fjern listestyling */
-    border: none; /* Fjern kant */
+    background-color: $bg-color; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 1; 
+    padding: 0;
+    list-style: none; 
+    border: none; 
 }
 
 .dropdown-content a {
-    color: $primary-color; /* Tekstfarve */
-    padding: 12px 16px; /* Polstring */
-    text-decoration: none; /* Fjern understregning */
-    display: block; /* Gør links til blokke for korrekt placering */
+    color: $primary-color; 
+    padding: 12px 16px; 
+    text-decoration: none; 
+    display: block; 
 }
 
 .dropdown-content a:hover {
-    background-color: $bg-color; /* Baggrundsfarve ved hover */
+    background-color: $bg-color; 
 }
 
 .show {
-    display: block; /* Vis dropdown-menuen når klassen 'show' tilføjes */
+    display: block; 
 }
 
 
-//Burgermenu
+//HEADER: Burgermenu
+.burger-icon .fa-burger {
+  font-size: 24px; 
+  color: inherit; 
+}
+
 .burger-container {
   position: relative;
   cursor: pointer;
@@ -244,8 +239,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-gennemsigtig baggrund */
-  display: none; /* Start skjult */
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: none; 
   justify-content: center;
   align-items: center;
 }
@@ -254,13 +249,13 @@ p {
   width: 80%;
   max-width: 600px;
   padding: 40px;
-  border: 2px solid $primary-color; /* Ændr kantfarven her */
+  border: 2px solid $primary-color; 
   background-color: $bg-color;
   align-items: center;
   display: flex;
-  flex-direction: column; /* Sikrer, at indholdet er stablet lodret */
-  justify-content: center; /* Centrer lodret */
-  align-items: center; /* Centrer vandret */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
 }
 
 .modal-nav ul {
@@ -283,23 +278,28 @@ p {
   color: $info-color;
 }
 
-  //Styling af indhold i main
-  main {
+// MAIN
+main {
       img {
-      width: 100%; // Gør billedet 100% af dets containerbredde
-      height: auto; // Bevar billedets aspektratio
-      display: block; // Fjern eventuelle mellemrum under billedet
-      margin: 0 auto; // Centrer billedet inden i dets container
+      width: 100%; 
+      height: auto; 
+      display: block; 
+      margin: 0 auto; 
     }
   
+       
+    img:hover {
+      transform: scale(1.05); // Skalér billedet lidt ved hover
+    }  
+
+
 .main-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); // Opretter 4 kolonner med samme bredde
-  grid-gap: 20px; // Afstand mellem grid-elementer
-
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 20px; 
 }
 
-// Stilregler for specifikke elementer inden i gridet
+// Main: Stilregler for specifikke elementer inden i gridet
 .main-container main {
   grid-column: span 4; // Elementet strækker sig over 4 kolonner
 }
@@ -324,49 +324,43 @@ p {
   grid-column: span 4; // Knappen strækker sig over 4 kolonner
 }
 
-    
-    img:hover {
-      transform: scale(1.05); // Skalér billedet lidt ved hover
-    }  
 
-    //Læs højt knap
+  // MAIN: Journalist- og lydknap  
     #read-aloud-button, #read-aloud-button-annonce {
-      border: none; // Fjern knapens kantlinje
-      background-color: transparent; // Gennemsigtig baggrund
-      padding: 10px; // Tilføj polstring for at øge knappens størrelse
+      border: none; 
+      background-color: transparent; 
+      padding: 10px; 
     }
     
     #read-aloud-button i, #read-aloud-button-annonce i {
       color: $info-color; 
-      font-weight: bold; // Gør ikonet fed
-      font-size: 20px; // Juster ikonets størrelse
+      font-weight: bold; 
+      font-size: 20px; 
     }
 
     #read-aloud-button-annonce{
       align-self: flex-start;
     }
 
-
-    //Journalist og lydknap  
     .lydogjournalist {
       display: flex;
-      align-items: center; // Centrer indholdet lodret
+      align-items: center; 
     }
     
     #read-aloud-button {
-      margin-right: 10px; // Tilføj en lille margen til højre for knappen
+      margin-right: 10px; 
     }
 
     .author-name {
-      border-top: 1px solid $primary-color; // Tilføj en top border til navne-containeren
-      padding-top: 10px; // Tilføj en lille padding øverst
+      border-top: 1px solid $primary-color; 
+      padding-top: 10px; 
     }
 
      h4 {
-      margin: 0; // Fjern eventuel indvendig margin
+      margin: 0; 
     }   
 
-    //Annoncer
+    // MAIN: Annoncer
     .advertisement {
       padding-left: 20px;
       padding-right: 20px;
@@ -401,59 +395,61 @@ p {
       }
   }
   
+  // MAIN: Divider linje i main 
   .divider-main {
-    border-top: 1px solid $primary-color; // Sort streg
-    width: 100%; // 90% af bredden
-    margin: 0 auto; // Centreret i forhold til parent container
+    border-top: 1px solid $primary-color; 
+    width: 100%; 
+    margin: 0 auto; 
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
+  // MAIN: Enkeltstående styling af billeder mm. 
   .samtale{
     padding-bottom: 20px;
   }
 
-//Styling af klik-her-knapper
+// MAIN: Styling af klik-her-knapper
   .custom-button, .no-button, .yes-button, .next-button {
-    border-radius: 100px; // Gør knappen helt rundet
-    background-color: $bg-color; // Direkte angivelse af baggrundsfarven
-    text-align: center; // Centrer tekst inden i knappen
-    font-size: 30px; // Skriftstørrelse
-    font-family: "Chomsky"; // Skrifttype
-    color: $info-color; // Skriftfarve
+    border-radius: 100px; 
+    background-color: $bg-color; 
+    text-align: center; 
+    font-size: 30px; 
+    font-family: "Chomsky"; 
+    color: $info-color; 
     box-shadow: 0px 5px 15px $info-color;
     border: none;
   }
 
-//Stor klik-her-knap
+// MAIN: Stor klik-her-knap
   .custom-button{
-  width: 200px; // Sæt bredden til 200px
-  height: 70px; // Sæt højden til 70px
+  width: 200px; 
+  height: 70px; 
 }
 
-//Lille klik-her-knap
+// MAIN: Lille klik-her-knap
 .no-button, .yes-button, .next-button{
-  width: 135px; // Sæt bredden til 200px
-  height: 50px; // Sæt højden til 70px
+  width: 135px; 
+  height: 50px; 
 }
 
 .around-button {
   padding-top: 30px;
   padding-bottom: 40px;
-  display: flex; // Gør det muligt at justere elementer i midten
-  align-items: center; // Centrer elementer vertikalt
-  justify-content: center; // Centrer elementer horisontalt
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
-// Styling for overlay
+// MAIN: Styling for overlay i forgrenede scenarier 1 + 2
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-gennemsigtig baggrund */
-  display: none; /* Start skjult */
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: none; 
   justify-content: center;
   align-items: center;
 
@@ -461,14 +457,14 @@ p {
     width: 80%;
     max-width: 600px;
     padding: 40px;
-    border: 2px solid $primary-color; /* Ændr kantfarven her */
+    border: 2px solid $primary-color; 
     background-color: $bg-color;
     justify-content: center;
     align-items: center;
 
     p {
       margin-bottom: 20px;
-      text-align: center; /* Centrer tekst i <p> elementer */
+      text-align: center; 
     }
 
     button {
@@ -486,7 +482,7 @@ p {
 }
 }
 
-//Styling af indhold i footer
+// FOOTER
 footer img {
   max-width: 50%;
   height: auto;
@@ -497,37 +493,36 @@ footer img {
   padding-top: 5em;
 }
 
-//grid i første header
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige bredde */
-  grid-template-rows: auto; /* Automatisk højde baseret på indhold */
-  gap: 10px; /* Mellemrum mellem elementer */
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: auto; 
+  gap: 10px; 
 }
 
 .logo-footer {
-  grid-column: 1 / 2; /* Placer dette element fra kolonne 1 til kolonne 2 */
-  grid-row: 1; /* Placer dette element i række 1 */
+  grid-column: 1 / 2; 
+  grid-row: 1; 
   padding-top: 1.1em;
 }
 .p-footer {
-  grid-column: 2 / 3; /* Placer dette element fra kolonne 3 til kolonne 4 */
-  grid-row: 1; /* Placer dette element i række 1 */
+  grid-column: 2 / 3; 
+  grid-row: 1; 
 }
 .footer-nav {
-  grid-column: 3 / 4; /* Placer dette element fra kolonne 2 til kolonne 3 */
-  grid-row: 1; /* Placer dette element i række 1 */
+  grid-column: 3 / 4; 
+  grid-row: 1; 
 }
 
 .menu-items{
   list-style-type: none;
   text-decoration: none;
   padding: 0;
-  text-align: left;
+  text-align: right;
 }
 
 .footer-nav ul li a {
-  color: #333;
+  color:$primary-color;
   text-decoration: none;
   font-size: 24px;
 }
@@ -535,5 +530,4 @@ footer img {
 .footer-nav ul li a:hover {
   color: $info-color;
 }
-
 }
