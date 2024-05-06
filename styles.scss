@@ -280,8 +280,8 @@ p {
 
 // MAIN
 
-// MAIN: Grid
-main {
+// MAIN: Grid 1
+.main {
   
   @media only screen and (min-width: 768px) {
     display: grid;
@@ -321,7 +321,7 @@ main {
 
     .brevdue {
       grid-column: 2 / 4; 
-      grid-row: span 6;
+      grid-row: span 5;
       max-width: 100%;
     }
 
@@ -342,12 +342,34 @@ main {
       grid-row: 4;
     }
 
-    .p-5 {
-      grid-column: 4 / 5;
-      grid-row: 5;
+    // Første annonce er sat i grid som container og flexbox med indholdet
+    .ad-1 {
+      grid-column: 1 / 5; 
+      grid-row: span 5;
+      margin-top: 2em;
     }
+    
+    .ad-1-item {
+      display: flex; 
+      justify-content: space-between; 
+      flex: 1; 
+      margin-right: 10px; 
+    
+      .left-column, .right-column {
+        flex: 1; 
+        padding: 20px;
+      }
+      }
+    
+    // Grid forsætter
+    
+  
   }
 }
+
+
+
+ 
   
 // MAIN: Billeder
 main {
@@ -519,7 +541,7 @@ main {
     }
   }
 }
-}
+
 
 
 // FOOTER
@@ -569,4 +591,5 @@ footer img {
 
 .footer-nav ul li a:hover {
   color: $info-color;
+}
 }
