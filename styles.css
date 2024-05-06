@@ -250,7 +250,7 @@ body .modal-nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     max-width: 1200px;
-    grid-gap: 1px;
+    grid-gap: 5px;
     /* Er ændret med br...
     .p-2 {
       grid-column: 1 / 1; 
@@ -360,7 +360,7 @@ body .modal-nav ul li a:hover {
     grid-row: 17/span 2;
     padding-top: 5em;
   }
-  body .main .divider-main {
+  body .main .divider-main-test {
     grid-column: 1/5;
     grid-row: 19;
   }
@@ -375,15 +375,18 @@ body .modal-nav ul li a:hover {
   }
   body .main .manchet-3 {
     grid-column: 1/2;
-    grid-row: 21;
+    grid-row: 20;
+    padding-top: 8em;
   }
   body .main .p-3-1 {
     grid-column: 1/2;
-    grid-row: 22;
+    grid-row: 20;
+    padding-top: 33em;
   }
   body .main .p-3-2 {
     grid-column: 1/2;
-    grid-row: 23;
+    grid-row: 20;
+    padding-top: 25em;
   }
   body .main .p-3-3 {
     grid-column: 2/3;
@@ -392,18 +395,21 @@ body .modal-nav ul li a:hover {
   }
   body .main .p-3-4 {
     grid-column: 2/3;
-    grid-row: 21;
+    grid-row: 20;
     padding-top: 1em;
+    padding-top: 12em;
   }
   body .main .p-3-5 {
     grid-column: 2/3;
-    grid-row: 22;
+    grid-row: 20;
+    padding-top: 24em;
   }
   body .main .tavle {
     grid-column: 3/5;
     grid-row: 20/span 5;
     padding-left: 5em;
-    padding-top: 2em;
+    padding-top: 7em;
+    transform: scale(1.2);
   }
   body .main .desktop {
     grid-column: 1/3;

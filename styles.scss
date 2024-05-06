@@ -287,7 +287,7 @@ p {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)); 
     max-width: 1200px;
-    grid-gap: 1px;
+    grid-gap: 5px;
 
     .divider-main {
       grid-column: 1 / 5;
@@ -423,7 +423,7 @@ p {
     }
 
     //Tredje artikel 
-    .divider-main {
+    .divider-main-test {
       grid-column: 1 / 5;
       grid-row: 19;
     }
@@ -441,17 +441,20 @@ p {
 
     .manchet-3{
       grid-column: 1 / 2;
-      grid-row: 21;
+      grid-row: 20;
+      padding-top: 8em;
     }
 
     .p-3-1{
       grid-column: 1 / 2;
-      grid-row: 22;
+      grid-row: 20;
+      padding-top: 33em;
     }
 
     .p-3-2{
       grid-column: 1 / 2;
-      grid-row: 23;
+      grid-row: 20;
+      padding-top: 25em;
     }
 
     .p-3-3{
@@ -462,20 +465,23 @@ p {
 
     .p-3-4{
       grid-column: 2 / 3;
-      grid-row: 21;
+      grid-row: 20;
       padding-top: 1em;
+      padding-top: 12em;
     }
 
     .p-3-5{
       grid-column: 2 / 3;
-      grid-row: 22;
+      grid-row: 20;
+      padding-top: 24em;
     }
 
     .tavle {
       grid-column: 3 / 5;
       grid-row: 20 / span 5;
       padding-left: 5em;
-      padding-top: 2em;
+      padding-top: 7em;
+      transform: scale(1.2);
     }
 
     .desktop {
