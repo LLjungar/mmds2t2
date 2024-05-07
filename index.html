@@ -182,7 +182,7 @@
         <img src="img/brev.png" alt="Billede af en brev med påtegnet personlige detaljer for at illustrere det spørgsmålet handler om">
       <p>Vil du åbne dette brev og tro på alt hvad der står?</p>
       <button class="yes-button" onclick="showSecondModal(1)">Ja da!</button>
-      <button class="no-button" onclick="showThirdModal(1)">Næppe</button>
+      <button class="no-button" onclick="hideAllModals()">Næppe</button>
     </div>
   </div>
   
@@ -362,7 +362,7 @@
     <div class="right-column-2"> 
     <img src="img/resume.png" alt="Billede af parfume inspireret af Coco Chanel No. 5 der illustreret her understøtter annoncens indhold">
     </div>
-
+    
 <!-- Knap 3 til forgrenet scenarie -->
 <div class="last">
     <div class="third-button">
@@ -371,56 +371,58 @@
       </div>  
     </div>
   </div>   
-  
+
   <!-- Overlay til første valgmulighed -->
-  <div id="overlay-first-choice" class="overlay">
+  <div id="third-overlay-first-choice" class="overlay">
     <div class="modal">
       <p>Du har modtaget et brev. Langt væk fra e-boks, i en flot kuvert. Udsmykket
         med både klistermærker i mange farver og dyre frimærker. 
         Aldrig før har noget lignende ligget i din postkasse, så du tænker på, hvem der mon har sendt dig det.
-        
+
         Lad os sige at du åbner brevet: Er du kritisk? Stoler du som udgangspunkt på alt hvad der står i brevet, hvis ikke du kender afsenderen?</p>
-  
-      <button class="false-button" onclick="showCancelModal()">Nej</button>
-      <button class="true-button" onclick="showOkModal()">Ja</button>
+
+      <button class="false-button" onclick="showThirdCancelModal()">Nej</button>
+      <button class="true-button" onclick="showThirdOkModal()">Ja</button>
     </div>
   </div>
-  
+
   <!-- Overlay til "False" -->
-  <div id="overlay-false-choice" class="overlay">
+  <div id="third-overlay-false-choice" class="overlay">
     <div class="modal">
       <p>Den er faktisk lidt længere, når det handler om din sikkerhed. På med rustningen igen og læs dette nummer af Det Digitale Skjold “Digitalt Bedrageri - Forstå Cyberangreb”.</p> 
       <p>Mange tak for at læse denne udgave af Det Digitale Skjold. 
       Klik på videre for at afslutte.</p>
-  
-      <button class="next-button" onclick="hideAllModals()">Videre</button>
+
+      <button class="next-button" onclick="hideThirdModals()">Videre</button>
     </div>
   </div>
-  
+
 <!-- Overlay til "True" -->
-<div id="overlay-true-choice" class="overlay">
+<div id="third-overlay-true-choice" class="overlay">
     <div class="modal">
       <p>Forestil dig situationen fra før, men på en skærm. På din telefon, din tablet, dit ur eller din computer. 
       Hvor end du foretager kommunikative interaktioner i dag. Måske er det en messenger-tråd,
       en sms eller en mail. Nogen har kontaktet dig, det kan være nogen du ikke kender. 
       Det kan også være et navn du kender, men som på den ene eller anden måde optræder anderledes end sædvanligt. Det kan være deres formuleringer, deres navn, deres profilbillede.</p> 
       <p>Hvad foretager dig?</p>
-  
-      <button class="false-button" onclick="showCancelModal()">Jeg svarer dem</button>
-      <button class="true-button-2" onclick="showTrueTrueModal()">Jeg bruger min sunde fornuft</button>
+
+      <button class="false-button" onclick="showThirdCancelModal()">Jeg svarer dem</button>
+      <button class="true-button-2" onclick="showThirdTrueTrueModal()">Jeg bruger min sunde fornuft</button>
     </div>
   </div>
-  
+
   <!-- Overlay til "True-True" -->
-  <div id="overlay-true-true-choice" class="overlay">
+  <div id="third-overlay-true-true-choice" class="overlay">
     <div class="modal">
       <p>Du har gennemført dette nummer af Det Digitale Skjold “Digitalt Bedrageri - Forstå Cyberangreb”. 
         Og godt tænkt, forresten! Internettet er ikke et farligt sted, så længe man bringer sund fornuft i rygsækken. Uheld kan ske alle vegne, biler kan køre ind i hinanden uden at begge fører har noget med det at gøre. Og så langt, er du vidst ret godt rustet. Mange tak for at læse denne udgave af Det Digitale Skjold.</p> 
       <p>Klik på videre for at afslutte.</p>
-  
-      <button class="next-button" onclick="hideAllModals()">Videre</button>
+
+      <button class="next-button" onclick="hideThirdModals()">Videre</button>
     </div>
   </div>
+
+
 
   
 </div> 

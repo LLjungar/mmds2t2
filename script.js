@@ -82,57 +82,40 @@ function showOkModal(buttonId) {
 // Knap 3 til forgrenet scenarie
 function showThirdModal() {
   hideAllModals(); // Skjuler alle overlayers
-  var overlay = document.getElementById("overlay-first-choice");
+  var overlay = document.getElementById("third-overlay-first-choice");
   overlay.style.display = "flex"; // Viser overlay for første valgmulighed
 }
 
-// Overlay til første valgmulighed (False)
-function showCancelModal() {
+// Overlay til første valgmulighed (False) for knap 3
+function showThirdCancelModal() {
   hideAllModals(); // Skjuler alle overlayers
-  var overlay = document.getElementById("overlay-false-choice");
+  var overlay = document.getElementById("third-overlay-false-choice");
   overlay.style.display = "flex"; // Viser overlay for "False"
 }
 
-// Overlay til første valgmulighed (True)
-function showOkModal() {
+// Overlay til første valgmulighed (True) for knap 3
+function showThirdOkModal() {
   hideAllModals(); // Skjuler alle overlayers
-  var overlay = document.getElementById("overlay-true-choice");
+  var overlay = document.getElementById("third-overlay-true-choice");
   overlay.style.display = "flex"; // Viser overlay for "True"
 }
 
-// Overlay til anden valgmulighed (True-True)
-function showTrueTrueModal() {
+// Overlay til anden valgmulighed (True-True) for knap 3
+function showThirdTrueTrueModal() {
   hideAllModals(); // Skjuler alle overlayers
-  var overlay = document.getElementById("overlay-true-true-choice");
+  var overlay = document.getElementById("third-overlay-true-true-choice");
   overlay.style.display = "flex"; // Viser overlay for "True-True"
 }
 
-// Funktion til at skjule alle overlayers
-function hideAllModals() {
+// Funktion til at skjule alle overlayers for knap 3
+function hideThirdModals() {
   var overlays = document.querySelectorAll(".overlay");
   overlays.forEach(function(overlay) {
-    overlay.style.display = "none"; // Skjuler alle overlayers
-  });
-}
-
-// Overlay til første valgmulighed (True)
-function showOkModal() {
-  hideAllModals(); // Skjuler alle overlayers
-  var overlay = document.getElementById("overlay-true-choice");
-  overlay.style.display = "flex"; // Viser overlay for "True"
-}
-
-// Funktion til at skjule alle overlayers
-function hideAllModals() {
-  var overlays = document.querySelectorAll(".overlay");
-  overlays.forEach(function(overlay) {
-    overlay.style.display = "none"; // Skjuler alle overlayers
+      overlay.style.display = "none"; // Skjuler alle overlayers
   });
 }
 
 
-  
-  
 
   
 
