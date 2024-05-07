@@ -100,8 +100,9 @@ body {
   align-self: center;
   text-align: right;
 
+  /*
   @media only screen and (min-width: 768px) {
-    padding-right: 2em;
+    padding-right: 2em;*/
 }
 }
 
@@ -165,17 +166,22 @@ p {
   grid-column: 1 / 5; 
   grid-row: 6; 
   align-self: center;
-  text-align: center;
+  text-align: left;
   padding-left: 2em;
   padding-right: 2em;
 }
 }
 
 //HEADER: Sprogmenu
-.dropbtn .fa-globe,
-.dropbtn .fa-chevron-down {
+.dropbtn i.fa-globe,
+.dropbtn i.fa-chevron-down {
     font-size: 24px; /* Ændr størrelsen efter behov */
 }
+
+.dropbtn {
+  @media only screen and (min-width: 768px) {
+    padding-right: 2em
+}}
 
 .lang-nav {
     position: relative; 
@@ -190,16 +196,22 @@ p {
     color: inherit; 
 }
 
+.dropdown {
+  display: flex;
+  align-items: center; 
+}
+
 .dropdown-content {
     display: none; 
     position: absolute;
     background-color: $bg-color; 
-    min-width: 160px;
+    min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
     z-index: 1; 
     padding: 0;
     list-style: none; 
     border: none; 
+    margin-top: 10em;
 }
 
 .dropdown-content a {
@@ -447,33 +459,28 @@ p {
 
     .p-3-1{
       grid-column: 1 / 2;
-      grid-row: 20;
-      padding-top: 33em;
+      grid-row: 21;
+   
     }
 
     .p-3-2{
       grid-column: 1 / 2;
-      grid-row: 20;
-      padding-top: 25em;
+      grid-row: 22;
     }
 
     .p-3-3{
       grid-column: 2 / 3;
       grid-row: 20;
-      padding-top: 2em;
     }
 
     .p-3-4{
       grid-column: 2 / 3;
-      grid-row: 20;
-      padding-top: 1em;
-      padding-top: 12em;
+      grid-row: 21;
     }
 
     .p-3-5{
       grid-column: 2 / 3;
-      grid-row: 20;
-      padding-top: 24em;
+      grid-row: 22;
     }
 
     .tavle {
@@ -530,7 +537,7 @@ p {
       grid-row: 28;
     }
 
-    //Anden annonce
+    //Anden annonce med flex
     .ad-2 {
       grid-column: 1 / 5;
       grid-row: 28 / span 5;
@@ -555,24 +562,20 @@ p {
     .right-column-2 {
       flex: 1;
       width: 70%;
-      grid-row: span 2; /* Span over begge rækker */
       z-index: 1;
       flex-grow: 1;
     }
     
+    //Sat lidt ekstra op for ikke at ændre html rækkefølge til mobilversion
     .last {
-      width: 100%; /* Sørg for at det fylder hele bredden */
-      text-align: left; /* Centrer indholdet */
-      margin-top: 2em; /* Lidt topmargen for at adskille fra indholdet ovenfor */
+      width: 100%; 
+      text-align: left; 
+      margin-top: 2em; 
       padding-left: 10em;
     }
-     
   }
 }
 
-
-
- 
   
 // MAIN: Billeder
 main {
@@ -634,15 +637,9 @@ main {
       justify-content: center; 
       padding-top: 5%;
       padding-bottom: 5%;
-      border: 2px solid black;
+      border: 2px solid $primary-color;
       background-color: $secondary-color;
-  
-      .annonce-line {
-          border-top: 1px solid $primary-color;
-          padding-top: 0;
-          width: 25%;
-          text-align: center;
-      }
+      text-align: center;
   
       .advertisement-heading {
           margin: 0;
@@ -653,12 +650,31 @@ main {
   
       @media screen and (max-width: 768px) {
           .advertisement-heading {
-              font-size: 70px;
+              font-size: 65px;
               font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           }
       }
+
+      .annonce-line, .advertisement-manchet, .advertisement-manchet {
+        text-align: left;
+      }
+
+      .annonce-line {
+        display: inline-block; // Ændret til inline-block
+        border-top: 1px solid $primary-color;
+        padding-top: 10px; // Juster padding som ønsket
+        margin: auto; // Centrerer annonce-linjen
+      }
   }
   
+//Særlig opsætning af anden annonce 
+  .ad-2 {
+    .last {
+      padding-top: 4em;
+      padding-bottom: 2em;
+    }
+  }
+
   // MAIN: Divider linje i main 
   .divider-main {
     border-top: 1px solid $primary-color; 
@@ -799,4 +815,4 @@ footer img {
 .footer-nav ul li a:hover {
   color: $info-color;
 }
-}
+
