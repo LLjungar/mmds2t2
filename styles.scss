@@ -573,9 +573,7 @@ p {
     //Sat lidt ekstra op for ikke at ændre html rækkefølge til mobilversion
     .last {
       width: 100%; 
-      text-align: left; 
       margin-top: 2em; 
-      padding-left: 10em;
     }
   }
 }
@@ -673,7 +671,7 @@ main {
   
 //Særlig opsætning af anden annonce 
   .ad-2 {
-    .last {
+    .third-button {
       padding-top: 4em;
       padding-bottom: 2em;
     }
@@ -694,7 +692,7 @@ main {
   }
 
 // MAIN: Styling af klik-her-knapper
-  .custom-button, .no-button, .yes-button, .next-button {
+  .custom-button, .no-button, .yes-button, .next-button, .false-button, .true-button {
     border-radius: 100px; 
     background-color: $bg-color; 
     text-align: center; 

@@ -499,9 +499,7 @@ body p {
   }
   .main .last {
     width: 100%;
-    text-align: left;
     margin-top: 2em;
-    padding-left: 10em;
   }
 }
 
@@ -584,7 +582,7 @@ h4 {
   margin: auto;
 }
 
-.ad-2 .last {
+.ad-2 .third-button {
   padding-top: 4em;
   padding-bottom: 2em;
 }
@@ -601,7 +599,7 @@ h4 {
   padding-bottom: 20px;
 }
 
-.custom-button, .no-button, .yes-button, .next-button {
+.custom-button, .no-button, .yes-button, .next-button, .false-button, .true-button {
   border-radius: 100px;
   background-color: #F5F5F5;
   text-align: center;

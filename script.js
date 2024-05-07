@@ -77,6 +77,60 @@ function showOkModal(buttonId) {
     var overlayCancel = document.getElementById("overlay-cancel");
     overlayCancel.style.display = "flex"; // Vis overlay for "Cancel"
   }
+
+
+// Knap 3 til forgrenet scenarie
+function showThirdModal() {
+  hideAllModals(); // Skjuler alle overlayers
+  var overlay = document.getElementById("overlay-first-choice");
+  overlay.style.display = "flex"; // Viser overlay for første valgmulighed
+}
+
+// Overlay til første valgmulighed (False)
+function showCancelModal() {
+  hideAllModals(); // Skjuler alle overlayers
+  var overlay = document.getElementById("overlay-false-choice");
+  overlay.style.display = "flex"; // Viser overlay for "False"
+}
+
+// Overlay til første valgmulighed (True)
+function showOkModal() {
+  hideAllModals(); // Skjuler alle overlayers
+  var overlay = document.getElementById("overlay-true-choice");
+  overlay.style.display = "flex"; // Viser overlay for "True"
+}
+
+// Overlay til anden valgmulighed (True-True)
+function showTrueTrueModal() {
+  hideAllModals(); // Skjuler alle overlayers
+  var overlay = document.getElementById("overlay-true-true-choice");
+  overlay.style.display = "flex"; // Viser overlay for "True-True"
+}
+
+// Funktion til at skjule alle overlayers
+function hideAllModals() {
+  var overlays = document.querySelectorAll(".overlay");
+  overlays.forEach(function(overlay) {
+    overlay.style.display = "none"; // Skjuler alle overlayers
+  });
+}
+
+// Overlay til første valgmulighed (True)
+function showOkModal() {
+  hideAllModals(); // Skjuler alle overlayers
+  var overlay = document.getElementById("overlay-true-choice");
+  overlay.style.display = "flex"; // Viser overlay for "True"
+}
+
+// Funktion til at skjule alle overlayers
+function hideAllModals() {
+  var overlays = document.querySelectorAll(".overlay");
+  overlays.forEach(function(overlay) {
+    overlay.style.display = "none"; // Skjuler alle overlayers
+  });
+}
+
+
   
   
 
