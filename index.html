@@ -181,6 +181,7 @@
 <!-- Overlay til første valgmulighed -->
 <div id="overlay-first-1" class="overlay">
     <div class="modal">
+        <img src="img/brev.png" alt="Billede af en brev med påtegnet personlige detaljer for at illustrere det spørgsmålet handler om">
       <p>Vil du åbne dette brev og tro på alt hvad der står?</p>
       <button class="yes-button" onclick="showSecondModal(1)">Ja da!</button>
       <button class="no-button" onclick="showThirdModal(1)">Næppe</button>
@@ -310,6 +311,7 @@
 <!-- Overlay til første valgmulighed -->
 <div id="overlay-first-2" class="overlay">
     <div class="modal">
+        <img src="img/vase.png" alt="Billede af en vase med påtegnet historiske detaljer for at illustrere det spørgsmålet handler om">
       <p>Vil du have denne flotte italienske vase fra det 5. århundrede f.Kr. stående midt på dit spisebord, selvom der er rådne tulipaner i?</p>
       <button class="yes-button" onclick="showOkModal(2)">OK</button>
       <button class="no-button" onclick="showCancelModal(2)">Cancel</button>
@@ -357,19 +359,21 @@
 <button id="read-aloud-button-annonce">
         <i class="fas fa-volume-up"></i> <!-- Font Awesome ikon for lyd -->
     </button>
-
-       <!-- Knap til forgrenet scenarie -->
-       <button class="custom-button" onclick="showModal()">Klik her</button>
 </div>
     <div class="right-column-2"> 
     <img src="img/resume.png" alt="Billede af parfume inspireret af Coco Chanel No. 5 der illustreret her understøtter annoncens indhold">
     </div>
+
+     <!-- Knap til forgrenet scenarie -->
+     <div class="last">
+     <button class="custom-button" onclick="showModal()">Klik her</button>
+    </div>    
 </div>
 </div> 
 </div> 
 </main>
 </div>
-</div>
+
 
 <footer class="footer-grid">
     <div class="logo-footer">
@@ -421,5 +425,6 @@
 </footer>
 <script src="script.js"></script>
 </body>
+</div>
 </div>
 </html>
