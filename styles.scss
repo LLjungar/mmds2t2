@@ -99,22 +99,18 @@ body {
 }
 
 .lang-nav {
-  grid-column: 3 / 3; 
+  grid-column: 4 / 4; 
   grid-row: 1; 
   align-self: center;
   text-align: right;
-
-  /*
-  @media only screen and (min-width: 768px) {
-    padding-right: 2em;*/
-}
+  padding-right: 2em;
 }
 
 .burger-container {
   grid-column: 4 / 4; 
   grid-row: 1; 
   align-self: center;
-  padding-right: 1em;
+  text-align: right;
 }
 
 h1 {
@@ -187,7 +183,7 @@ p {
     padding-right: 2em
 }}
 
-.lang-nav {
+.dropdown {
     position: relative; 
 }
 
@@ -195,7 +191,6 @@ p {
   list-style: none;
 }
 
-.dropbtn:active,
 .dropbtn:visited {
     color: inherit; 
 }
@@ -214,7 +209,6 @@ p {
     z-index: 1; 
     padding: 0;
     list-style: none; 
-    border: none; 
     margin-top: 10em;
 }
 
@@ -816,5 +810,6 @@ footer img {
 
 .footer-nav ul li a:hover {
   color: $info-color;
+}
 }
 
